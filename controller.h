@@ -12,15 +12,6 @@ int COLORS[COLOR_NUM][3] = {
   {0,0,255}
 };
 
-
-//#define FROM_R 255
-//#define FROM_G 0
-//#define FROM_B 0
-//
-//#define TO_R 0
-//#define TO_G 255
-//#define TO_B 0
-
 #define STEP 50
 #define DELAY 1500
 
