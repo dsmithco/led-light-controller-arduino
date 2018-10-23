@@ -6,13 +6,12 @@
 #define LED_PIN 22
 #define COLOR_NUM 3
 
-int COLORS[COLOR_NUM][3] = {
-  {255,0,0},
-  {0,255,0},
-  {0,0,255}
+int COLORS[COLOR_NUM][4] = {
+  {127,100,0,50},
+  {127,20,20,50},
+  {60,20,20,50}
 };
 
-#define STEP 50
 #define DELAY 1500
 
 
@@ -51,7 +50,7 @@ void fadeColors(int fromRGB[], int toRGB[]) {
        int TO_B = toRGB[2];
        
        setColor(FROM_R + (i * (TO_R - FROM_R)/100), FROM_G + (i * (TO_G - FROM_G)/100), FROM_B + (i * (TO_B - FROM_B)/100));
-       delay(STEP);
+       delay(fromRGB[3]);
     }
 }
 
